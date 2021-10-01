@@ -180,7 +180,6 @@ input::-webkit-inner-spin-button {
 /* ========== intro ========= */
 .introduction-img {
   width: 48%;
-  object-fit: cover;
 }
 /* ========== main-content ========= */
 .main-img {
