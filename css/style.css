@@ -471,14 +471,15 @@ footer {
   border-bottom: 5px solid #000;
 }
 /* ========== favorite page ========= */
-.activity-btn {
-  color: #fff;
-  background: #d69916;
+.activity-link {
+  color: #d69916;
+  padding: 0.7rem;
+  border: 3.5px solid #d69916;
 }
 
-.activity-btn:hover {
+.activity-link:hover {
   color: #fff;
-  background: #d8b362;
+  background: #d69916;
 }
 
 .favorite-list {

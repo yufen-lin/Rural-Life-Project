@@ -20,7 +20,7 @@ class UI {
     if (favoriteList.length === 0) {
       result = `<div class="d-flex flex-column justify-content-center align-items-center py-5">
                                 <p class="fs-4 text-center mb-3">目前尚無任何收藏</p>
-                                <a href="activities.html" class="btn activity-btn mt-3" type="button">Go！去找活動吧<i
+                                <a href="activities.html" class="activity-link mt-3 fw-bold rounded-pill">Go！去找活動吧<i
                                         class="fas fa-arrow-right ms-2"></i>
                                 </a>
                             </div>`;
