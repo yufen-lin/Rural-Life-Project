@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Life</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Swiper   -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg w-100 fixed-top py-3 py-lg-1 px-lg-3">
+            <div class="container-fluid">
+                <h1><a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-tree me-1"></i>
+                        Rural Life</a></h1>
+                <div class="nav-icon d-flex flex-wrap order-lg-2">
+                    <a href="favorite.html" class="fs-5"><i class="fas fa-heart"></i></a>
+                    <div class="cart-btn position-relative">
+                        <a href="cart.html" class="fs-5"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="cart-items-amount position-absolute rounded-circle">0</div>
+                    </div>
+                    <a class="navbar-toggler fs-5 p-0 border-0" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <i class="fas fa-hamburger"></i>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+                    <ul class="navbar-nav mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5 active" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="story.html">農村故事</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="activities.html">體驗活動</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="product.html">精選好物</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-banner banner mb-5">
+            <div id="carouselIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item position-relative active" data-bs-interval="2500">
+                        <img src="images/home-banner-story.jpg" class="d-block w-100 vh-100 img-cover"
+                            alt="banner-story">
+                        <div
+                            class="banner-content w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white position-absolute top-50 start-50 translate-middle">
+                            <h2 class="banner-title text-center lh-base">細數農村再生 改變持續發生</h2>
+                            <p class="banner-text fs-4 text-center lh-base">
+                                農村再生凝聚了農村居民的共識，激發了他們的想像與創意，延伸出更多由下而上的創新模式，擁抱農村新未來。由衷的希望，讓住在農村、來到農村的每個人都能感受到幸福與滿足。</p>
+                            <a href="story.html" class="banner-link px-4 py-3">查看更多故事</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item position-relative" data-bs-interval="2500">
+                        <img src="images/home-banner-activity.jpg" class="d-block w-100 vh-100 img-cover"
+                            alt="banner-activity">
+                        <div
+                            class="banner-content w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white position-absolute top-50 start-50 translate-middle">
+                            <h2 class="banner-title text-center lh-base">遠離城市的喧囂 返璞歸真</h2>
+                            <p class=" banner-text fs-4 text-center lh-base">
+                                在忙碌的生活中，被時間與壓力追著跑，是否已經忘記了生活單純的那種美好？帶著輕鬆愉悅的腳步，讓我們一起回歸田園，來場與大自然的約會吧。
+                            </p>
+                            <a href="activities.html" class="banner-link px-4 py-3">查看體驗活動</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item position-relative" data-bs-interval="2500">
+                        <img src="images/home-banner-product.jpg" class="d-block w-100 vh-100 img-cover"
+                            alt="banner-product">
+                        <div
+                            class="banner-content w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white position-absolute top-50 start-50 translate-middle">
+                            <h2 class="banner-title text-center lh-base">永續農業 從支持小農開始</h2>
+                            <p class="banner-text fs-4 text-center lh-base">
+                                除了親自去體驗農村生活的珍貴，許多品牌作為小農與消費者之間的橋樑，透過嚴格把關食材的新鮮與安全，將農夫們的用心傳遞到餐桌上，讓我們用行動來支持他們吧。
+                            </p>
+                            <a href="product.html" class="banner-link px-4 py-3">支持在地小農</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="intro mb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 animate__animated animate__slideInDown">
+                        <h3 class="fs-1 fw-bold pb-2 text-center">
+                            農村再生</h3>
+                        <p class="fs-4 lh-base mt-3 mb-5 animate__animated animate__slideInDown">
+                            由農村社區在地組織及團體以自主精神，整合當地居民之意見，共同對農村社區建設提出構想並研提之農村永續發展及活化再生計畫，以計畫有秩序地美化農村社區環境、活化產業、傳承農村文化，打造具在地特色的發展願景。
+                        </p>
+                    </div>
+                    <div class="col-lg-6  d-flex justify-content-between animate__animated animate__slideInDown">
+                        <img src="images/intro-1.jpg" alt="introduction-img" style="width: 48%;">
+                        <img src="images/intro-2.jpg" alt="introduction-img" style="width: 48%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content mb-5 py-5 bg-lightColor">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 animate__animated animate__fadeInDown animate__delay-1s animate__slow">
+                        <img src="images/intro-story.jpg" alt="main-content-img" class="main-img img-cover">
+                    </div>
+                    <div
+                        class="col-lg-6 order-2 animate__animated animate__fadeInDown animate__delay-1s animate__slow d-flex flex-column align-items-center align-items-lg-start my-5 my-lg-0">
+                        <h3 class="fs-1 fw-bold pb-2">
+                            閱讀農村故事</h3>
+                        <p class="fs-4 lh-base mt-3 mb-3 text-center text-lg-start">
+                            沒有時間親自到訪一探農村的秘密<br>那就從這些文字間一起探索農村
+                        </p>
+                        <a href="story.html" class="banner-link">前往閱讀<i class="fas fa-arrow-circle-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div
+                        class="col-lg-6 animate__animated animate__fadeInDown animate__delay-2s animate__slow order-0 order-lg-1">
+                        <img src="images/intro-activity.jpg" alt="main-content-img" class="main-img img-cover">
+                    </div>
+                    <div
+                        class="col-lg-6  animate__animated animate__fadeInDown animate__delay-2s animate__slow d-flex flex-column align-items-center align-items-lg-end my-5 my-lg-0 order-1 order-lg-0">
+                        <h3 class="fs-1 fw-bold pb-2 text-end">
+                            參與體驗活動</h3>
+                        <p class="fs-4 lh-base mt-3 mb-3 text-center text-lg-end">
+                            捲起衣袖踏上曝曬過陽光的土壤<br>用最親近的方式來場田野之旅
+                        </p>
+                        <a href="activities.html" class="banner-link">前往參與<i class="fas fa-arrow-circle-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 animate__animated animate__fadeInDown animate__delay-4s animate__slow">
+                        <img src="images/intro-product.jpg" alt="main-content-img" class="main-img img-cover">
+                    </div>
+                    <div
+                        class="col-lg-6 animate__animated animate__fadeInDown animate__delay-4s animate__slow d-flex flex-column align-items-center align-items-lg-start my-5 my-lg-0">
+                        <h3 class="fs-1 fw-bold pb-2">
+                            支持在地小農</h3>
+                        <p class="fs-4 lh-base mt-3 mb-3 text-center text-lg-start">
+                            用行動支持在地小農的產品<br>讓他們的用心與努力不會白費
+                        </p>
+                        <a href="product.html" class="banner-link">前往支持<i class="fas fa-arrow-circle-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hot-products mb-5">
+            <div class="container">
+                <h3 class="fs-1 fw-bold text-center my-4"><i class="fab fa-hotjar text-danger"></i></i>
+                    熱銷產品</h2>
+                    <div class="swiper">
+                        <ul class="swiper-wrapper pt-3 pb-5">
+                            <!-- <div class="swiper-slide">
+                                <li class="swiper-slide product-card card shadow-sm mb-3">
+                                    <div class="img-container">
+                                        <img src="images/青稻夫米(無毒米).jpeg" alt="product" class="product-img">
+                                    </div>
+                                    <div class="card-body">
+                                        <h2 class="card-title fs-4 text-center fw-bold my-1 lh-sm">青稻夫米(無毒米)</h2>
+                                        <span class="card-subtitle fs-6 text-center fw-bold my-1 lh-s">Pesticide-free
+                                            Rice</span>
+                                        <p class="card-text text-center fs-4 py-3">$ 450元</p>
+                                        <button class="btn add-to-cart-btn text-white w-100 border-0 py-3" py-3"><i
+                                                class="fas fa-shopping-cart"></i>
+                                            加入購物車</button>
+                                    </div>
+                                </li>
+                            </div> -->
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+        </section>
+
+        <section class="product-info">
+            <div class="modal fade" id="productInfoModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content position-relative">
+                        <button type="button" class="close-btn position-absolute" data-bs-dismiss="modal"
+                            aria-label="Close"><i class="fas fa-times"></i>
+                        </button>
+                        <!-- modal content -->
+                        <div class="card w-100 border-0">
+                            <div class="row g-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe px-4 py-5">
+            <h4 class="fs-2 fw-bold text-center pb-4 lh-base">訂閱 Rural Life，與您分享更多關於農村的溫暖故事。</h4>
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-7 col-lg-4">
+                    <form class="needs-validation" novalidate>
+                        <div class="input-group mb-3 justify-content-center pt-3">
+                            <input type="email" class="form-control border-0 py-1 px-3" placeholder="請輸入你的 Email"
+                                required>
+                            <button class="btn subscribe-btn border-0 py-2 px-3 text-white" type="submit"><i
+                                    class="fas fa-bell me-2"></i>訂閱
+                            </button>
+                            <div class="invalid-feedback ms-2 mt-2">
+                                請輸入有效的電子信箱
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="px-3 py-4 text-center">
+        <span class="lh-base text-white">Copyright © 2021 By Ruby <a href="https://github.com/yufen-lin" class="px-2"><i
+                    class="fab fa-github text-white"></i>
+            </a> 資料與圖片僅做個人練習使用，無任何商業行為</span>
+    </footer>
+
+    <div class="scrollTop">
+        <a href="#" class="top-btn"><i class="far fa-arrow-alt-circle-up fa-3x"></i>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

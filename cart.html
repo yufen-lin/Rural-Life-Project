@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Life</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg w-100 fixed-top py-3 py-lg-1 px-lg-3">
+            <div class="container-fluid">
+                <h1><a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-tree me-1"></i>
+                        Rural Life</a></h1>
+                <div class="nav-icon d-flex flex-wrap order-lg-2">
+                    <a href="favorite.html" class="fs-5"><i class="fas fa-heart"></i></a>
+                    <div class="cart-btn position-relative">
+                        <a href="cart.html" class="fs-5 active"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="cart-items-amount position-absolute rounded-circle">0</div>
+                    </div>
+                    <a class="navbar-toggler fs-5 p-0 border-0" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <i class="fas fa-hamburger"></i>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+                    <ul class="navbar-nav mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="story.html">農村故事</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="activities.html">體驗活動</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="product.html">精選好物</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner banner position-relative mb-5">
+            <img src="images/cart-banner.jpg" alt="cart-banner">
+            <div
+                class="banner-content d-flex flex-column justify-content-center align-items-center w-100 h-100 position-absolute top-0 left-0">
+                <h3 class="fs-1 text-white px-4 py-3 border border-5">購物清單</h3>
+            </div>
+        </section>
+
+        <section class="proccess">
+            <div class="container">
+                <ul class="order-check-proccess d-flex w-100 mb-3">
+                    <li class="py-3 d-flex flex-column align-items-center active" id="step-1">
+                        <span class="mb-2 fs-5">❶</span>
+                        <p class="mb-3">購物明細</p>
+                        <div class="bar"></div>
+                    </li>
+                    <li class="py-3 d-flex flex-column align-items-center" id="step-2">
+                        <span class="mb-2 fs-5">❷</span>
+                        <p class="mb-3">資料填寫</p>
+                        <div class="bar"></div>
+                    </li>
+                    <li class="py-3 d-flex flex-column align-items-center" id="step-3">
+                        <span class="mb-2 fs-5">❸</span>
+                        <p class="mb-3">訂單確認</p>
+                        <div class="bar"></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cart mt-3 mb-5">
+            <span class="fs-2 fw-bold d-block text-center py-sm"><i class="fas fa-clipboard me-3"></i>訂單建立</span>
+            <div class="container-fluid container-lg">
+                <div class="row">
+                    <div class="col-12 col-xl-8 mb-3 mb-xl-0">
+                        <div class="bg bg-light px-2 px-md-4 py-4">
+                            <table class="table">
+                                <thead class="border-bottom border-3">
+                                    <tr>
+                                        <th scope="col" class="d-none d-sm-block"></th>
+                                        <th scope="col" class="fw-bold pb-3">商品名稱</th>
+                                        <th scope="col" class="d-none d-md-table-cell fw-bold pb-3">售價</th>
+                                        <th scope="col" class="fw-bold pb-3">數量</th>
+                                        <th scope="col" class="fw-bold pb-3">金額</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="cart-content">
+                                    <!-- <tr class="cart-item">
+                                        <td class="d-none d-sm-block align-middle"><img src="images/柑橘果醬.jpeg"
+                                                alt="product">
+                                        </td>
+                                        <td class="align-middle">柑橘果醬<span class="d-none d-md-inline my-2 lh-base"> (
+                                                Tangerine
+                                                Marmalade) </span></td>
+                                        <td class="align-middle">$ 150</td>
+                                        <td class="align-middle">
+                                            <div class="input-group">
+                                                <button class="btn p-0"="button"><i class="fas fa-minus p-1"
+                                                        data-id="1"></i>
+                                                </button>
+                                                <input type="number" class="item-quantity ps-2" value="1">
+                                                <button class="btn p-0"="button"><i class="fas fa-plus p-1"
+                                                        data-id="1"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">$ 540</td>
+                                        <td class="align-middle"><i class="remove-item-btn fas fa-trash-alt"
+                                                data-id=${item.id}></i>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="cart-amount bg-light">
+                            <span class="d-block text-white py-3 px-3">
+                                訂單資訊</span>
+                            <ul class="p-4 mb-4">
+                                <li class="pb-4 d-flex justify-content-between">
+                                    <span>小計</span>
+                                    <span>NT$ <span class="cart-subtotal">0</span></span>
+                                </li>
+                                <li class="pb-4 d-flex justify-content-between">
+                                    <span>運費</span>
+                                    <span>NT$ 100</span>
+                                </li>
+                                <li class="pb-4 d-flex justify-content-between">
+                                    <span>折扣</span>
+                                    <span>NT$ <span class="discount">0</span></span>
+                                </li>
+                                <li class="input-group pt-2 pb-3 border-bottom border-3">
+                                    <input type="text" class="form-control" placeholder="請輸入折扣碼">
+                                    <button class="btn coupon-btn" type="button">套用</button>
+                                </li>
+                                <li class="py-4 d-flex justify-content-between">
+                                    <span>總金額</span>
+                                    <span>NT$ <span class="cart-total">0</span></span>
+                                </li>
+                                <button type="button" class="checkout-btn btn w-100">前往結帳</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="product.html" class="btn shopping-btn mt-4"><i class="fas fa-arrow-left me-1"></i>
+                    繼續購物</a>
+            </div>
+        </section>
+
+        <section class="checkout-info d-none mt-3 mb-5">
+            <span class="fs-2 fw-bold d-block text-center py-sm"><i class="fas fa-clipboard me-3"></i>訂購人資訊</span>
+            <div class="container">
+                <div class="bg-light px-4 px-md-5 mb-4">
+                    <form class="order-form row needs-validation py-4" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">收件人姓名<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">
+                                請輸入正確的姓名
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telephone" class="form-label">聯絡電話<span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="telephone" required>
+                            <div class="invalid-feedback">
+                                請輸入正確的聯絡電話
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                請輸入有效的電子信箱
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">收件地址<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="address" required>
+                            <div class="invalid-feedback">
+                                請輸入正確的收件地址
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="payment" class="form-label">付款方式<span class="text-danger">*</span></label>
+                            <select class="form-select" required id="payment">
+                                <option selected disabled value="">請選擇付款方式</option>
+                                <option value="信用卡">信用卡</option>
+                                <option value="ATM 匯款">ATM 匯款</option>
+                                <option value="超商繳費">超商繳費</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                請選擇一種付款方式
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">備註留言</label>
+                            <textarea class="form-control" placeholder="歡迎留下任何想告訴我們的事！" id="comment"
+                                style="height: 100px"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="cart.html" class="btn previous-btn me-3"><i
+                                    class="fas fa-arrow-left me-1"></i>上一步</a>
+                            <button type="submit" class="btn confirm-btn">確認送出<i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-done mb-5 d-none">
+            <span class="fs-2 fw-bold d-block text-center py-sm"><i class="fas fa-clipboard me-3"></i>訂單完成</span>
+            <div class="container bg-light py-5 mx-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p class="fs-2 fw-bold pb-5 lh-base px-3">感謝有您的支持，歡迎參與更多農村活動<i class="far fa-smile ms-2"></i>
+                    </p>
+                    <a href="product.html" class="btn previous-btn me-3">繼續購物</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="px-3 py-4 text-center">
+        <span class="lh-base text-white">Copyright © 2021 By Ruby <a href="https://github.com/yufen-lin" class="px-2"><i
+                    class="fab fa-github text-white"></i>
+            </a> 資料與圖片僅做個人練習使用，無任何商業行為</span>
+    </footer>
+
+    <div class="scrollTop">
+        <a href="#" class="top-btn"><i class="far fa-arrow-alt-circle-up fa-3x"></i>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Life</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg w-100 fixed-top py-3 py-lg-1 px-lg-3">
+            <div class="container-fluid">
+                <h1><a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-tree me-1"></i>
+                        Rural Life</a></h1>
+                <div class="nav-icon d-flex flex-wrap order-lg-2">
+                    <a href="favorite.html" class="fs-5"><i class="fas fa-heart"></i></a>
+                    <div class="cart-btn position-relative">
+                        <a href="cart.html" class="fs-5"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="cart-items-amount position-absolute rounded-circle">0</div>
+                    </div>
+                    <a class="navbar-toggler fs-5 p-0 border-0" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <i class="fas fa-hamburger"></i>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+                    <ul class="navbar-nav mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="story.html">農村故事</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5" href="activities.html">體驗活動</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3 fs-5 active" href="product.html">精選好物</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner banner position-relative">
+            <img src="images/product-banner.jpg" alt="story-banner">
+            <div
+                class="banner-content d-flex flex-column justify-content-center align-items-center w-100 h-100 position-absolute top-0 left-0">
+                <h3 class="fs-1 text-white px-4 py-3 border border-5">精選好物</h3>
+            </div>
+        </section>
+
+        <section class="products-page">
+            <div class="container">
+                <!-- products type -->
+                <ul class="d-flex justify-content-center type-filter py-5 btn-group" role="group">
+                    <li><button type="button" class="btn type border-0 active" data-type="全部">全部</button>
+                    </li>
+                    <li><button type="button" class="btn type" data-type="榖物雜糧類">榖物雜糧類</button></li>
+                    <li><button type="button" class="btn type" data-type="調理食品類">調理食品類</button></li>
+                    <li><button type="button" class="btn type" data-type="飲料飲品類">飲料飲品類</button></li>
+                    <li><button type="button" class="btn type" data-type="休閒食品類">休閒食品類</button></li>
+                </ul>
+
+                <!-- products list -->
+                <ul class="products pb-5">
+                    <div class="row">
+                    </div>
+                </ul>
+            </div>
+        </section>
+
+        <section class="product-info">
+            <div class="modal fade" id="productInfoModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content position-relative">
+                        <button type="button" class="close-btn position-absolute" data-bs-dismiss="modal"
+                            aria-label="Close"><i class="fas fa-times"></i>
+                        </button>
+                        <!-- modal content -->
+                        <div class="card w-100 border-0">
+                            <div class="row g-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe px-4 py-5">
+            <h4 class="fs-2 fw-bold text-center pb-4 lh-base">訂閱 Rural Life，與您分享更多關於農村的溫暖故事。</h4>
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-7 col-lg-4">
+                    <form class="needs-validation" novalidate>
+                        <div class="input-group mb-3 justify-content-center pt-3">
+                            <input type="email" class="form-control border-0 py-1 px-3" placeholder="請輸入你的 Email"
+                                required>
+                            <button class="btn subscribe-btn border-0 py-2 px-3 text-white" type="submit"><i
+                                    class="fas fa-bell me-2"></i>訂閱
+                            </button>
+                            <div class="invalid-feedback ms-2 mt-2">
+                                請輸入有效的電子信箱
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="px-3 py-4 text-center">
+        <span class="lh-base text-white">Copyright © 2021 By Ruby <a href="https://github.com/yufen-lin" class="px-2"><i
+                    class="fab fa-github text-white"></i>
+            </a> 資料與圖片僅做個人練習使用，無任何商業行為</span>
+    </footer>
+
+    <div class="scrollTop">
+        <a href="#" class="top-btn"><i class="far fa-arrow-alt-circle-up fa-3x"></i>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+</body>
+
+</html>
