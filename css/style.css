@@ -95,7 +95,6 @@ input::-webkit-inner-spin-button {
   background: var(--lightColor);
 }
 
-/* utility */
 .more-btn {
   color: #fff;
   background: var(--primaryColor);
@@ -181,6 +180,7 @@ input::-webkit-inner-spin-button {
 /* ========== intro ========= */
 .introduction-img {
   width: 48%;
+  object-fit: cover;
 }
 /* ========== main-content ========= */
 .main-img {
@@ -471,6 +471,16 @@ footer {
   border-bottom: 5px solid #000;
 }
 /* ========== favorite page ========= */
+.activity-btn {
+  color: #fff;
+  background: #d69916;
+}
+
+.activity-btn:hover {
+  color: #fff;
+  background: #d8b362;
+}
+
 .favorite-list {
   min-height: 60vh;
 }
@@ -513,7 +523,6 @@ footer {
 
 @media screen and (min-width: 1200px) {
   .product-card .card-body {
-    /* min-height: 220px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

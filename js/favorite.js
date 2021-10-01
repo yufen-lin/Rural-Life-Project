@@ -17,19 +17,28 @@ class UI {
   // 將收藏清單渲染於畫面上
   displayFavoriteList(favoriteList) {
     let result = "";
-    favoriteList.forEach((item) => {
-      result += `<div class="col-12 col-md-6 col-lg-4">
-    <li class="px-3 py-3 mb-4 bg-light d-flex flex-column align-items-center">
-        <h2 class="fs-6 pb-3 lh-base "><i class="fas fa-tag me-2"></i>${item.Name}</h2>
-        <div class="ps-4">
-            <a href="#" class="d-inline-block more-link me-3 px-2 py-2 border bg-white text-dark rounded"
-                data-id="${item.id}">詳細資訊</a>
-            <a href="#" class="d-inline-block delete-link me-3 px-2 py-2 border bg-white text-dark rounded"
-                data-id="${item.id}">取消收藏</a>
-        </div>
-    </li>
-</div>`;
-    });
+    if (favoriteList.length === 0) {
+      result = `<div class="d-flex flex-column justify-content-center align-items-center py-5">
+                                <p class="fs-4 text-center mb-3">目前尚無任何收藏</p>
+                                <a href="activities.html" class="btn activity-btn mt-3" type="button">Go！去找活動吧<i
+                                        class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>`;
+    } else {
+      favoriteList.forEach((item) => {
+        result += `<div class="col-12 col-md-6 col-lg-4">
+        <li class="px-3 py-3 mb-4 bg-light d-flex flex-column align-items-center">
+            <h2 class="fs-6 pb-3 lh-base "><i class="fas fa-tag me-2"></i>${item.Name}</h2>
+            <div class="ps-4">
+                <a href="#" class="d-inline-block more-link me-3 px-2 py-2 border bg-white text-dark rounded"
+                    data-id="${item.id}">詳細資訊</a>
+                <a href="#" class="d-inline-block delete-link me-3 px-2 py-2 border bg-white text-dark rounded"
+                    data-id="${item.id}">取消收藏</a>
+            </div>
+        </li>
+    </div>`;
+      });
+    }
     favorite.innerHTML = result;
   }
 
