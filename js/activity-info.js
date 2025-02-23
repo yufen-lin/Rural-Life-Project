@@ -16,11 +16,10 @@ class Activities {
 
     try {
       let response = await fetch(
-        "https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvSuggestTravel.aspx?$filter=ID+like+" +
-          id
+        "https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvSuggestTravel.aspx"
       );
       let data = await response.json();
-      return data;
+      return { ...data[id], ID: id };
     } catch (error) {
       console.log(error);
     }
@@ -37,25 +36,25 @@ class UI {
   // 渲染活動資訊頁面
   showActivityInfo(activity) {
     const activityInfoData = {
-      dayTravel: [activity[0].FirstDayTravel],
-      dayFeature: [activity[0].FirstDayFeature],
+      dayTravel: [activity.FirstDayTravel],
+      dayFeature: [activity.FirstDayFeature],
     };
 
     // 根據活動的天數不同渲染不同的內容
-    switch (activity[0].TravelDays) {
+    switch (activity.TravelDays) {
       case "2天":
-        activityInfoData.dayTravel.push(activity[0].SecondDayTravel);
-        activityInfoData.dayFeature.push(activity[0].SecondDayFeature);
+        activityInfoData.dayTravel.push(activity.SecondDayTravel);
+        activityInfoData.dayFeature.push(activity.SecondDayFeature);
         break;
 
       case "3天":
         activityInfoData.dayTravel.push(
-          activity[0].SecondDayTravel,
-          activity[0].ThirdDayTravel
+          activity.SecondDayTravel,
+          activity.ThirdDayTravel
         );
         activityInfoData.dayFeature.push(
-          activity[0].SecondDayFeature,
-          activity[0].ThirdDayFeature
+          activity.SecondDayFeature,
+          activity.ThirdDayFeature
         );
         break;
 
@@ -66,12 +65,12 @@ class UI {
     }
 
     // 活動簡介
-    activityTop.innerHTML = `<h2 class="activity-title fs-1 fw-bold px-3 my-4 lh-sm">${activity[0].Name}</h2>
-                    <p class="lh-base mb-3 fs-5">${activity[0].MovingIntroduction}</p>
+    activityTop.innerHTML = `<h2 class="activity-title fs-1 fw-bold px-3 my-4 lh-sm">${activity.Name}</h2>
+                    <p class="lh-base mb-3 fs-5">${activity.MovingIntroduction}</p>
                     <div class="d-flex justify-content-between flex-column flex-sm-row">
                         <p class="lh-base mb-3 fs-5"><i class="fas fa-map-marker-alt text-danger me-1"></i>
-                            地點：${activity[0].City} ${activity[0].Town}</p>
-                        <button type="button" class="add-to-favorite-btn rounded-pill fw-bold" data-id="${activity[0].ID}"><i
+                            地點：${activity.City} ${activity.Town}</p>
+                        <button type="button" class="add-to-favorite-btn rounded-pill fw-bold" data-id="${activity.ID}"><i
                                 class="far fa-heart me-2 fw-bold"></i>加入收藏</button>
                     </div>`;
 
@@ -102,12 +101,10 @@ class UI {
     activityContent.innerHTML = result;
 
     // 交通資訊
-    trafficInfo.innerText = `${activity[0].TrafficGuidelines || "無詳細資訊"}`;
+    trafficInfo.innerText = `${activity.TrafficGuidelines || "無詳細資訊"}`;
 
     const addToFavoriteBtn = document.querySelector(".add-to-favorite-btn");
-    let inFavoriteList = favoriteList.find(
-      (item) => activity[0].ID === item.id
-    );
+    let inFavoriteList = favoriteList.find((item) => activity.ID === item.id);
     if (inFavoriteList) {
       addToFavoriteBtn.classList.add("active");
       addToFavoriteBtn.innerHTML = `<i class="far fa-heart me-2 fw-bold"></i>已加入收藏`;
@@ -121,8 +118,8 @@ class UI {
     const addToFavoriteBtn = document.querySelector(".add-to-favorite-btn");
     addToFavoriteBtn.addEventListener("click", (event) => {
       const favoriteItem = {
-        id: activity[0].ID,
-        Name: activity[0].Name,
+        id: activity.ID,
+        Name: activity.Name,
       };
 
       let inFavoriteList = favoriteList.find(

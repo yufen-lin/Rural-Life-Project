@@ -15,7 +15,7 @@ class Activities {
   async getActivities() {
     try {
       let response = await fetch(
-        "https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvSuggestTravel.aspx"
+        "https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvSuggestTravel.aspx"
       );
       let data = await response.json();
       jsonData = data;
@@ -41,7 +41,7 @@ class UI {
                     </p>
                 </div>`;
     } else {
-      activities.forEach((activity) => {
+      activities.forEach((activity, index) => {
         result += `<div class="col-md-6 mb-3">
                             <li class="card border-start-0 shadow-sm">
                                 <div class="card-body activity-card rounded-3 p-4 pb-3">
@@ -54,7 +54,7 @@ class UI {
                                             <span class="badge rounded-pill tag fs-6">${activity.TravelDays}</span><span
                                                 class="badge rounded-pill tag fs-6">${activity.City}</span>
                                         </div>
-                                        <a href="#" class="more-link-btn" data-id=${activity.ID}>( More )</a>
+                                        <a href="#" class="more-link-btn" data-id=${index}>( More )</a>
                                     </div>
                                 </div>
                             </li>
@@ -71,19 +71,29 @@ class UI {
   }
 
   searchActivities(activities) {
-    searchBtn.addEventListener("click", (event) => {
-      const tempActivities = [];
-      const keyword = searchInput.value;
-      activities.forEach((activity) => {
-        if (
-          activity.City.indexOf(keyword) === 0 ||
-          activity.TravelDays.indexOf(keyword) === 0
-        ) {
-          tempActivities.push(activity);
-        }
-      });
-      this.pagination(tempActivities, 1);
+    const performSearch = () => {
+      const keyword = searchInput.value.trim().replace(/台/g, "臺");
+      if (!keyword) return;
+
+      const result = activities.filter(
+        (activity) =>
+          activity.City.includes(keyword) ||
+          activity.TravelDays.includes(keyword)
+      );
+
+      this.pagination(result, 1);
       searchInput.value = "";
+    };
+
+    searchBtn.addEventListener("click", (event) => {
+      performSearch();
+    });
+
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.isComposing) {
+        event.preventDefault();
+        performSearch();
+      }
     });
   }
 
